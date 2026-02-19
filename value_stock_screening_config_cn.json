@@ -1,0 +1,14 @@
+{
+  "operating_margin_min": 10.0,
+  "per_max": 10.0,
+  "pbr_max": 1.5,
+  "roa_min": 7.0,
+  "market_cap_max": 300000000000,
+  "description": {
+    "operating_margin_min": "営業利益率の最小値（%）",
+    "per_max": "PERの最大値（倍）",
+    "pbr_max": "PBRの最大値（倍）",
+    "roa_min": "ROAの最小値（%）",
+    "market_cap_max": "時価総額の最大値（円、中国株は約300億人民元相当）"
+  }
+}

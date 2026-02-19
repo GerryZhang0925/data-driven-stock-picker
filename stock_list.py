@@ -6,7 +6,7 @@ import pandas as pd
 import os
 import time
 from datetime import datetime, timedelta
-from config import STOCK_LIST_PATH, DATA_DIR, TODAY
+from config import STOCK_LIST_PATH, DATA_DIR_CN, TODAY
 
 
 def get_xsb_stocks_only():
@@ -312,8 +312,8 @@ def get_stock_list():
                 
                 print("既存データから銘柄リストを取得します...")
                 # 既存のCSVファイルから銘柄コードを取得
-                if os.path.exists(DATA_DIR):
-                    csv_files = [f for f in os.listdir(DATA_DIR) if f.endswith('.csv') and not f.startswith('stock_list')]
+                if os.path.exists(DATA_DIR_CN):
+                    csv_files = [f for f in os.listdir(DATA_DIR_CN) if f.endswith('.csv') and not f.startswith('stock_list')]
                     if csv_files:
                         codes = [f.replace('.csv', '') for f in csv_files]
                         # 60（上海A株）、43、83、87、8（新三板・北交所）で始まるコード

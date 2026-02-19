@@ -31,8 +31,14 @@ def print_data_acquisition_summary(latest_dates, update_stats, failed_stocks, ol
     
     # 銘柄タイプ別の統計を表示
     print(f"\n銘柄タイプ別の処理統計:")
+    type_name_map = {
+        "60": "上海A株（60）",
+        "68": "科創板（68）",
+        "other": "その他",
+        "jp": "日本株"
+    }
     for stock_type, stats in stats_by_type.items():
-        type_name = {"60": "上海A株（60）", "68": "科創板（68）", "other": "その他"}[stock_type]
+        type_name = type_name_map.get(stock_type, f"その他（{stock_type}）")
         print(f"  {type_name}:")
         print(f"    処理済み: {stats['processed']}銘柄")
         print(f"    最新取引日データあり: {stats['has_target_date']}銘柄")
